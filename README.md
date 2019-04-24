@@ -13,6 +13,7 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 [ARIA](https://github.com/invainn/ARIA)
 
 ## Immediate Goals
+- [x] Setup repository
 - [ ] Create the template for at least one document used by NNMTA
 - [ ] Hook the document engine to the main web application using Flask
 - [ ] Show a proof of concept to stakeholders
