@@ -1,4 +1,4 @@
-# aria-document-engine
+# aria-document-generator
 
 ## Brief Description
 
@@ -15,9 +15,9 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 ## Immediate Goals
 - [x] Setup repository
 - [ ] Create the template for at least one document used by NNMTA
-- [ ] Hook the document engine to the main web application using Flask
+- [ ] Hook the document generator to the main web application using Flask
 - [ ] Show a proof of concept to stakeholders
 
 ## Future Work
-- [ ] Add all remaining documents to document engine
+- [ ] Add all remaining documents to document generator
 - [ ] Evaluate future needs of NNMTA for new document(s)
