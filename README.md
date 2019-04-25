@@ -21,3 +21,8 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 ## Future Work
 - [ ] Add all remaining documents to document generator
 - [ ] Evaluate future needs of NNMTA for new document(s)
+
+## Dependencies
+Python >= 3.4
+python-docx >= 0.9.9
+lxml >= 2.3.2
