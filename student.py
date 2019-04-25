@@ -43,29 +43,29 @@ class Student:
         self.__performance_time = performance_time
 
     # Accessor methods
-    def get_id(self, id):
+    def get_id(self):
         return self.__id
 
-    def get_first_name(self, first_name):
+    def get_first_name(self):
         return self.__first_name
 
-    def get_last_name(self, last_name):
+    def get_last_name(self):
         return self.__last_name
 
-    def get_age(self, age):
+    def get_age(self):
         return self.__age
 
-    def get_song_1(self, song_1):
+    def get_song_1(self):
         return self.__song_1
 
-    def get_song_2(self, song_2):
+    def get_song_2(self):
         return self.__song_2
 
-    def get_song_3(self, song_3):
+    def get_song_3(self):
         return self.__song_3
 
-    def get_teacher_name(self, teacher_name):
+    def get_teacher_name(self):
         return self.__teacher_name
 
-    def get_performance_time(self, performance_time):
+    def get_performance_time(self):
         return self.__performance_time
