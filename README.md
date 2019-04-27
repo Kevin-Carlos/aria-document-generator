@@ -22,7 +22,21 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 - [ ] Add all remaining documents to document generator
 - [ ] Evaluate future needs of NNMTA for new document(s)
 
+# To Run
+```
+flask run --port=4321
+```
+
 ## Dependencies
-* Python >= 3.4
-* python-docx >= 0.9.9
-* lxml >= 2.3.2
+### Package  Version
+------------ -------
+Click        7.0
+Flask        1.0.2
+itsdangerous 1.1.0
+Jinja2       2.10.1
+lxml         4.3.3
+MarkupSafe   1.1.1
+pip          19.0.3
+python-docx  0.8.10
+setuptools   40.8.0
+Werkzeug     0.15.2
