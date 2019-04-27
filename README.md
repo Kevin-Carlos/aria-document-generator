@@ -30,13 +30,13 @@ flask run --port=4321
 ## Dependencies
 ### Package  Version
 ------------ -------
-Click        7.0
-Flask        1.0.2
-itsdangerous 1.1.0
-Jinja2       2.10.1
-lxml         4.3.3
-MarkupSafe   1.1.1
-pip          19.0.3
-python-docx  0.8.10
-setuptools   40.8.0
-Werkzeug     0.15.2
+* Click        7.0
+* Flask        1.0.2
+* itsdangerous 1.1.0
+* Jinja2       2.10.1
+* lxml         4.3.3
+* MarkupSafe   1.1.1
+* pip          19.0.3
+* python-docx  0.8.10
+* setuptools   40.8.0
+* Werkzeug     0.15.2
