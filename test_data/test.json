@@ -1,0 +1,34 @@
+{
+	"documents": {
+		"2019_upper_festival_adjudication_form": false,
+		"2019_upper_festival_announcing_sheet": true,
+		"2019_upper_festival_certificates": false,
+		"2019_upper_festival_master_judge_repertoire": false,
+		"2019_upper_festival_master_judge_schedule": false,
+		"2019_upper_festival_results_sheet": false,
+		"2019_upper_festival_room_schedules": false,
+		"2019_upper_festival_session_assignments": false,
+		"2019_upper_festival_session_labels": false,
+		"2019_upper_festival_teacher_master": false
+	},
+	"event": {
+		"event_name": "2019 Upper Festival",
+		"sessions": {
+			"friday": [{
+					"day": "Friday",
+					"time": "9:00 AM",
+					"session_number": "1",
+					"name_of_room": "(Recital Hall)"
+				},
+				{
+					"day": "Friday",
+					"time": "9:00 AM",
+					"session_number": "1",
+					"name_of_room": "(Recital Hall)"
+				}
+			],
+			"saturday": [],
+			"sunday": []
+		}
+	}
+}
