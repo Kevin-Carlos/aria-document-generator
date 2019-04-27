@@ -1,2 +1,8 @@
 # Ignore pycache files
 __pycache__/
+# Ignore environment files
+env/
+# Ignore VSCode files
+.vscode
+# Ignore Word Documents
+/documents
