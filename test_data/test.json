@@ -1,34 +1,293 @@
 {
 	"documents": {
-		"2019_upper_festival_adjudication_form": false,
-		"2019_upper_festival_announcing_sheet": true,
-		"2019_upper_festival_certificates": false,
-		"2019_upper_festival_master_judge_repertoire": false,
-		"2019_upper_festival_master_judge_schedule": false,
-		"2019_upper_festival_results_sheet": false,
-		"2019_upper_festival_room_schedules": false,
-		"2019_upper_festival_session_assignments": false,
-		"2019_upper_festival_session_labels": false,
-		"2019_upper_festival_teacher_master": false
+		"adjudicationForm": false,
+		"announcingSheet": true,
+		"certificates": false,
+		"masterJudgeRepertoire": false,
+		"masterJudgeSchedule": false,
+		"resultsSheet": false,
+		"roomSchedules": false,
+		"sessionAssignments": false,
+		"sessionLabels": false,
+		"teacherMaster": false
 	},
-	"event": {
-		"event_name": "2019 Upper Festival",
+	"adjudicationForm": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"announcingSheet": {
+		"eventName": "",
+		"documentTitle": "",
 		"sessions": {
 			"friday": [{
-					"day": "Friday",
-					"time": "9:00 AM",
-					"session_number": "1",
-					"name_of_room": "(Recital Hall)"
-				},
-				{
-					"day": "Friday",
-					"time": "9:00 AM",
-					"session_number": "1",
-					"name_of_room": "(Recital Hall)"
-				}
-			],
-			"saturday": [],
-			"sunday": []
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			}],
+			"saturday": [{
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			}],
+			"sunday": [{
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "",
+				"time": "",
+				"sessionNumber": "",
+				"nameOfRoom": "",
+				"classType": "",
+				"levels": "",
+				"firstJudge": "",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "",
+				"doorMonitorName": "",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"secondStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"thirdStudent": [{
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			}]
+		}
+	},
+	"certificates": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"masterJudgeRepertoire": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"masterJudgeSchedule": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"resultsSheet": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"roomSchedules": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"sessionAssignments": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"sessionLabels": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"teacherMaster": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
 		}
 	}
 }
