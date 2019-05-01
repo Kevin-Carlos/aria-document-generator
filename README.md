@@ -14,8 +14,9 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 
 ## Immediate Goals
 - [x] Setup repository
-- [ ] Create the template for at least one document used by NNMTA
+- [x] Create the template for at least one document used by NNMTA
 - [ ] Hook the document generator to the main web application using Flask
+- [ ] Refactor the code to implement a modular design and the DRY principle
 - [ ] Show a proof of concept to stakeholders
 
 ## Future Work
