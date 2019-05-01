@@ -6,96 +6,96 @@ from docx.shared import Inches
 app = Flask(__name__)
 
 # Set the route to 'gen-docs' and only accept POST requests
-@app.route('/gen-docs', methods=['POST'])
-def gen_docs():
+@app.route('/create-documents', methods=['POST'])
+def generateDocuments():
     # Create document variables to hold processing status.
     # By default they are set to not being requested.
     # If the document is requested it will be processed successfully or unsuccessfully.
     # The string will be updated either way.
-    adjudication_form = 'document was not requested.'
-    announcing_sheet = 'document was not requested.'
-    festival_certificates = 'document was not requested.'
-    master_judge_repertoire = 'document was not requested.'
-    master_judge_schedule = 'document was not requested.'
-    results_sheet = 'document was not requested.'
-    room_schedules = 'document was not requested.'
-    session_assignments = 'document was not requested.'
-    session_labels = 'document was not requested.'
-    teacher_master = 'document was not requested.'
+    adjudicationForm = 'document was not requested.'
+    announcingSheet = 'document was not requested.'
+    certificates = 'document was not requested.'
+    masterJudgeRepertoire = 'document was not requested.'
+    masterJudgeSchedule = 'document was not requested.'
+    resultsSheet = 'document was not requested.'
+    roomSchedules = 'document was not requested.'
+    sessionAssignments = 'document was not requested.'
+    sessionLabels = 'document was not requested.'
+    teacherMaster = 'document was not requested.'
 
     # Read the incoming JSON data and store it in 'data'
-    req_data = request.get_json()
+    reqData = request.get_json()
 
     # Determine if the JSON object has data, if it does...process it.
     try:
-        if (req_data is not None):
+        if (reqData is not None):
                 # -----------------
                 # Adjudication Form
                 # -----------------
-            if (req_data['documents']['2019_upper_festival_adjudication_form'] == True):
-                adjudication_form = create_adjudication_form(req_data)
+            if (reqData['documents']['adjudicationForm'] == True):
+                adjudicationForm = createAdjudicationForm(reqData)
                 # ----------------
                 # Announcing Sheet
                 # ----------------
-            if (req_data['documents']['2019_upper_festival_announcing_sheet'] == True):
-                announcing_sheet = create_announcing_sheet(req_data)
+            if (reqData['documents']['announcingSheet'] == True):
+                announcingSheet = createAnnouncingSheet(reqData)
                 # ---------------------
                 # Festival Certificates
                 # ---------------------
-            if (req_data['documents']['2019_upper_festival_certificates'] == True):
-                festival_certificates = create_festival_certificates(req_data)
+            if (reqData['documents']['certificates'] == True):
+                festivalCertificates = createCertificates(reqData)
                 # -----------------------
                 # Master Judge Repertoire
                 # -----------------------
-            if (req_data['documents']['2019_upper_festival_master_judge_repertoire'] == True):
-                master_judge_repertoire = create_master_judge_repertoire(req_data)
+            if (reqData['documents']['masterJudgeRepertoire'] == True):
+                masterJudgeRepertoire = createMasterJudgeRepertoire(reqData)
                 # ---------------------
                 # Master Judge Schedule
                 # ---------------------
-            if (req_data['documents']['2019_upper_festival_master_judge_schedule'] == True):
-                master_judge_schedule = create_master_judge_schedule(req_data)
+            if (reqData['documents']['masterJudgeSchedule'] == True):
+                masterJudgeSchedule = createMasterJudgeSchedule(reqData)
                 # -------------
                 # Results Sheet
                 # -------------
-            if (req_data['documents']['2019_upper_festival_results_sheet'] == True):
-                results_sheet = create_results_sheet(req_data)
+            if (reqData['documents']['resultsSheet'] == True):
+                resultsSheet = createResultsSheet(reqData)
                 # --------------
                 # Room Schedules
                 # --------------
-            if (req_data['documents']['2019_upper_festival_room_schedules'] == True):
-                room_schedules = create_room_schedules(req_data)
+            if (reqData['documents']['roomSchedules'] == True):
+                roomSchedules = createRoomSchedules(reqData)
                 # -------------------
                 # Session Assignments
                 # -------------------
-            if (req_data['documents']['2019_upper_festival_session_assignments'] == True):
-                session_assignments = create_session_assignments(req_data)
+            if (reqData['documents']['sessionAssignments'] == True):
+                sessionAssignments = createSessionAssignments(reqData)
                 # --------------
                 # Session Labels
                 # --------------
-            if (req_data['documents']['2019_upper_festival_session_labels'] == True):
-                session_labels = create_session_labels(req_data)
+            if (reqData['documents']['sessionLabels'] == True):
+                sessionLabels = createSessionLabels(reqData)
                 # --------------
                 # Teacher Master
                 # --------------
-            if (req_data['documents']['2019_upper_festival_teacher_master'] == True):
-                teacher_master = create_teacher_master(req_data)
+            if (reqData['documents']['teacherMaster'] == True):
+                teacherMaster = createTeacherMaster(reqData)
     except Exception as err:
         return f'Something Went Wrong \n Error Details Below \n, {err}'
     else:
         return f'''\n
-                   01. Adjudication Form: {adjudication_form} \n
-                   02. Announcing Sheet: {announcing_sheet} \n
-                   03. Festival Certificates: {festival_certificates} \n
-                   04. Master Judge Repertoire: {master_judge_repertoire} \n
-                   05. Master Judge Schedule: {master_judge_schedule} \n
-                   06. Results Sheet: {results_sheet} \n
-                   07. Room Schedules: {room_schedules} \n
-                   08. Session Assignments: {session_assignments} \n
-                   09. Session Labels: {session_labels} \n
-                   10. Teacher Master: {teacher_master} \n
+                   01. Adjudication Form: {adjudicationForm} \n
+                   02. Announcing Sheet: {announcingSheet} \n
+                   03. Festival Certificates: {certificates} \n
+                   04. Master Judge Repertoire: {masterJudgeRepertoire} \n
+                   05. Master Judge Schedule: {masterJudgeSchedule} \n
+                   06. Results Sheet: {resultsSheet} \n
+                   07. Room Schedules: {roomSchedules} \n
+                   08. Session Assignments: {sessionAssignments} \n
+                   09. Session Labels: {sessionLabels} \n
+                   10. Teacher Master: {teacherMaster} \n
         '''
 
-def create_adjudication_form(data):
+def createAdjudicationForm(data):
     try:
         #
         #
@@ -107,21 +107,108 @@ def create_adjudication_form(data):
         return f'document creation failed... \n {err}'
 
 
-def create_announcing_sheet(data):
+def createAnnouncingSheet(data):
     try:
-        # Create Document
+        # # Create Document
         document = Document()
-        # Upper Festival Title
-        document.add_heading(data['event']['event_name'], level=0)
-        # # Festival Subheading
-        # document.add_heading('Announcing Sheet', level=1)
-        # # Day, Time, Session Number, Room
-        # document.add_heading(str(data['event']['sessions']['friday']['day'])), level=1)
-        # # Add Class Type
-        # document.add_heading(str(data['event']['sessions']['friday']['class_type'])), level=1)
-        # # Add Level
-        # document.add_heading(str(data['event']['sessions']['friday']['levels'])), level=1)
-        # Write/Save Document
+
+        for i in data['announcingSheet']:
+            if i == 'eventName':
+                eventName = data['announcingSheet'].get(i, 'Entry not found.')
+            if i == 'documentTitle':
+                documentTitle = data['announcingSheet'].get(i, 'Entry not found.')
+            if i == 'sessions':
+                for j in data['announcingSheet']['sessions']:
+                    if j == 'friday':
+                        # Get all session data for Friday.
+                        friday = data['announcingSheet']['sessions'].get(j, 'No session data for Friday.')
+                    if j == 'saturday':
+                        # Get all session data for Saturday.
+                        saturday = data['announcingSheet']['sessions'].get(j, 'No session data for Saturday.')
+                    if j == 'sunday':
+                        # Get all session data for Sunday.
+                        sunday = data['announcingSheet']['sessions'].get(j, 'No session data for Sunday.')
+                        # Process session data for each session taking place on Sunday.
+                        for k in range(len(sunday)):
+                            # Gather Student-Independent Data
+                            day = str(sunday[k]['day'])
+                            time = str(sunday[k]['time'])
+                            sessionNumber = str(sunday[k]['sessionNumber'])
+                            nameOfRoom = str(sunday[k]['nameOfRoom'])
+                            location = day + ', ' + time + ', ' + sessionNumber + ', ' + nameOfRoom
+                            classType = sunday[k]['classType']
+                            levels = sunday[k]['levels']
+                            firstJudge = sunday[k]['firstJudge']
+                            if sunday[k]['secondJudge'] != '':
+                                secondJudge = sunday[k]['secondJudge']
+                            else:
+                                secondJudge = ''
+                            if sunday[k]['thirdJudge'] != '':
+                                thirdJudge = sunday[k]['thirdJudge']
+                            else:
+                                thirdJudge = ''
+                            proctorName = sunday[k]['proctorName']
+                            doorMonitorName = sunday[k]['doorMonitorName']
+                            performanceOrder = sunday[k]['performanceOrder']
+
+                            # Event Title
+                            document.add_heading(eventName, level=0)
+                            # Title Subheading
+                            document.add_heading(documentTitle, level=1)
+                            # Day, Time, Session Number, Room
+                            document.add_heading(location, level=2)
+                            # Add Performance Class Type
+                            document.add_heading(classType, level=2)
+                            # Add Students Levels
+                            document.add_heading(f'Levels: {levels}', level=2)
+                            # Add Judges
+                            document.add_heading(f'Judge: {firstJudge}', level=3)
+                            if sunday[k]['secondJudge'] != '':
+                                document.add_heading(f'Judge: {secondJudge}', level=3)
+                            if sunday[k]['thirdJudge'] != '':
+                                document.add_heading(f'Judge: {thirdJudge}', level=3)
+
+                            # Add Proctor
+
+
+                            # Add Door Monitor
+
+
+                            # Print Student-Independent Data
+                            print(day)
+                            print(time)
+                            print(sessionNumber)
+                            print(nameOfRoom)
+                            print(classType)
+                            print(levels)
+                            print(firstJudge)
+                            if sunday[k]['secondJudge'] != '':
+                                print(secondJudge)
+                            if sunday[k]['thirdJudge'] != '':
+                                print(thirdJudge)
+                            print(proctorName)
+                            print(doorMonitorName)
+                            print(performanceOrder)
+
+                            # Print Student Data
+                            if sunday[k]['firstStudent'] != '':
+                                print(sunday[k]['firstStudent'])
+                            if sunday[k]['secondStudent'] != '':
+                                print(sunday[k]['secondStudent'])
+                            if sunday[k]['thirdStudent'] != '':
+                                print(sunday[k]['thirdStudent'])
+                            if sunday[k]['fourthStudent'] != '':
+                                print(sunday[k]['fourthStudent'])
+                            if sunday[k]['fifthStudent'] != '':
+                                print(sunday[k]['fifthStudent'])
+
+                            print()
+                            print(f'END OF PAGE {k + 1}')
+                            print()
+                            # Page break after each session object is processed.
+                            document.add_page_break()
+
+        # # Write/Save Document
         document.save('./documents/announcing_sheet.docx')
 
         return 'document created successfully.'
@@ -129,7 +216,7 @@ def create_announcing_sheet(data):
         return f'document creation failed... \n {err}'
 
 
-def create_festival_certificates(data):
+def createCertificates(data):
     try:
         # !
         # !
@@ -141,7 +228,7 @@ def create_festival_certificates(data):
         return f'document creation failed... \n {err}'
 
 
-def create_master_judge_repertoire(data):
+def createMasterJudgeRepertoire(data):
     try:
         # !
         # !
@@ -153,7 +240,7 @@ def create_master_judge_repertoire(data):
         return f'document creation failed... \n {err}'
 
 
-def create_master_judge_schedule(data):
+def createMasterJudgeSchedule(data):
     try:
         # !
         # !
@@ -165,7 +252,7 @@ def create_master_judge_schedule(data):
         return f'document creation failed... \n {err}'
 
 
-def create_results_sheet(data):
+def createResultsSheet(data):
     try:
         # !
         # !
@@ -177,7 +264,7 @@ def create_results_sheet(data):
         return f'document creation failed... \n {err}'
 
 
-def create_room_schedules(data):
+def createRoomSchedules(data):
     try:
         # !
         # !
@@ -189,7 +276,7 @@ def create_room_schedules(data):
         return f'document creation failed... \n {err}'
 
 
-def create_session_assignments(data):
+def createSessionAssignments(data):
     try:
         # !
         # !
@@ -201,7 +288,7 @@ def create_session_assignments(data):
         return f'document creation failed... \n {err}'
 
 
-def create_session_labels(data):
+def createSessionLabels(data):
     try:
         # !
         # !
@@ -213,7 +300,7 @@ def create_session_labels(data):
         return f'document creation failed... \n {err}'
 
 
-def create_teacher_master(data):
+def createTeacherMaster(data):
     try:
         # !
         # !
