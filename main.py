@@ -1,6 +1,8 @@
 from flask import Flask, request
 from docx import Document
 from docx.shared import Inches
+from docx.enum.text import WD_ALIGN_PARAGRAPH
+from docx.enum.text import WD_BREAK
 
 # Create the Flask app.
 app = Flask(__name__)
@@ -158,7 +160,7 @@ def createAnnouncingSheet(data):
                             # Day, Time, Session Number, Room
                             document.add_heading(location, level=2)
                             # Add Performance Class Type
-                            document.add_heading(classType, level=2)
+                            document.add_heading(classType, level=1)
                             # Add Students Levels
                             document.add_heading(f'Levels: {levels}', level=2)
                             # Add Judges
@@ -167,40 +169,22 @@ def createAnnouncingSheet(data):
                                 document.add_heading(f'Judge: {secondJudge}', level=3)
                             if sunday[k]['thirdJudge'] != '':
                                 document.add_heading(f'Judge: {thirdJudge}', level=3)
-
                             # Add Proctor
-
-
+                            document.add_heading(f'Proctor: {proctorName}', level=3)
                             # Add Door Monitor
-
-
-                            # Print Student-Independent Data
-                            print(day)
-                            print(time)
-                            print(sessionNumber)
-                            print(nameOfRoom)
-                            print(classType)
-                            print(levels)
-                            print(firstJudge)
-                            if sunday[k]['secondJudge'] != '':
-                                print(secondJudge)
-                            if sunday[k]['thirdJudge'] != '':
-                                print(thirdJudge)
-                            print(proctorName)
-                            print(doorMonitorName)
-                            print(performanceOrder)
+                            document.add_heading(f'Door Monitor: {doorMonitorName}', level=3)
+                            # Performance Order
+                            document.add_heading(f'{performanceOrder}:', level=1)
 
                             # Print Student Data
                             if sunday[k]['firstStudent'] != '':
-                                print(sunday[k]['firstStudent'])
-                            if sunday[k]['secondStudent'] != '':
-                                print(sunday[k]['secondStudent'])
-                            if sunday[k]['thirdStudent'] != '':
-                                print(sunday[k]['thirdStudent'])
-                            if sunday[k]['fourthStudent'] != '':
-                                print(sunday[k]['fourthStudent'])
-                            if sunday[k]['fifthStudent'] != '':
-                                print(sunday[k]['fifthStudent'])
+                                name = sunday[k]['firstStudent'][0]['studentFullName']
+                                level = sunday[k]['firstStudent'][0]['individualLevel']
+                                p1 = document.add_paragraph()
+                                p1.alignment = WD_ALIGN_PARAGRAPH.LEFT
+                                p1.add_run(f'1. {name}')
+                                p1.alignment = None
+                                p1.add_run(f'\t\t\t\t\t\tLeveL: {level}')
 
                             print()
                             print(f'END OF PAGE {k + 1}')

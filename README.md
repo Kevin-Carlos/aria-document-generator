@@ -24,6 +24,7 @@ ARIA is a full-stack web application meant to help server the Northern Nevada Mu
 
 # To Run
 ```
+$env:FLASK_APP = "main"
 flask run --port=4321
 ```
 
