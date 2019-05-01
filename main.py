@@ -3,6 +3,7 @@ from docx import Document
 from docx.shared import Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.enum.text import WD_BREAK
+from docx.enum.table import WD_TABLE_ALIGNMENT
 
 # Create the Flask app.
 app = Flask(__name__)
@@ -124,9 +125,260 @@ def createAnnouncingSheet(data):
                     if j == 'friday':
                         # Get all session data for Friday.
                         friday = data['announcingSheet']['sessions'].get(j, 'No session data for Friday.')
+                        # Process session data for each session taking place on Friday.
+                        for k in range(len(friday)):
+                            # Gather Student-Independent Data
+                            day = str(friday[k]['day'])
+                            time = str(friday[k]['time'])
+                            sessionNumber = str(friday[k]['sessionNumber'])
+                            nameOfRoom = str(friday[k]['nameOfRoom'])
+                            location = day + ', ' + time + ', ' + sessionNumber + ', ' + nameOfRoom
+                            classType = friday[k]['classType']
+                            levels = friday[k]['levels']
+                            judges = friday[k]['judges']
+                            judge1 = judges[0].get('firstJudge', '')
+                            judge2 = judges[0].get('secondJudge', '')
+                            judge3 = judges[0].get('thirdJudge', '')
+                            students = friday[k]['students']
+                            student1 = students[0].get('firstStudent', '')
+                            student2 = students[0].get('secondStudent', '')
+                            student3 = students[0].get('thirdStudent', '')
+                            student4 = students[0].get('fourthStudent', '')
+                            student5 = students[0].get('fifthStudent', '')
+                            proctorName = friday[k]['proctorName']
+                            doorMonitorName = friday[k]['doorMonitorName']
+                            performanceOrder = friday[k]['performanceOrder']
+
+                            # Records Data For Table
+                            records = ()
+
+                            # Event Title
+                            document.add_heading(eventName, level=0)
+                            # Title Subheading
+                            document.add_heading(documentTitle, level=1)
+                            # Day, Time, Session Number, Room
+                            document.add_heading(location, level=2)
+                            # Add Performance Class Type
+                            document.add_heading(classType, level=1)
+                            # Add Students Levels
+                            document.add_heading(f'Levels: {levels}', level=2)
+                            # Add Judges
+                            document.add_heading(f'Judge: {judge1}', level=3)
+                            if judge2 != '':
+                                document.add_heading(f'Judge: {judge2}', level=3)
+                            if judge3 != '':
+                                document.add_heading(f'Judge: {judge3}', level=3)
+                            # Add Proctor
+                            document.add_heading(f'Proctor: {proctorName}', level=3)
+                            # Add Door Monitor
+                            document.add_heading(f'Door Monitor: {doorMonitorName}', level=3)
+                            # Performance Order
+                            document.add_heading(f'{performanceOrder}:\n', level=1)
+
+                            # Student Table
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table.alignment = WD_TABLE_ALIGNMENT.CENTER
+                            table.autofit = True
+                            table.style = 'TableGrid'
+                            headerCells = table.rows[0].cells
+                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run1.bold = True
+                            run1.underline = True
+                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2.bold = True
+                            run2.underline = True
+                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3.bold = True
+                            run3.underline = True
+                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4.bold = True
+                            run4.underline = True
+                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5.bold = True
+                            run5.underline = True
+                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6.bold = True
+                            run6.underline = True
+
+                            if student1[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student1 = tuple(student1[0].values())
+                                records += (student1,)
+                            else:
+                                student1 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student1,)
+                            if student2[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student2 = tuple(student2[0].values())
+                                records += (student2,)
+                            else:
+                                student2 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student2,)
+                            if student3[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student3 = tuple(student3[0].values())
+                                records += (student3,)
+                            else:
+                                student3 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student3,)
+                            if student4[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student4 = tuple(student4[0].values())
+                                records += (student4,)
+                            else:
+                                student4 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student4,)
+                            if student5[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student5 = tuple(student5[0].values())
+                                records += (student5,)
+                            else:
+                                student5 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student5,)
+
+                            # Add Student Data To Table
+                            i = 1
+                            for perf, lvl, s1, c1, s2, c2 in records:
+                                rowCells = table.rows[i].cells
+                                rowCells[0].text = str(perf)
+                                rowCells[1].text = str(lvl)
+                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[3].text = str(c1)
+                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[5].text = str(c2)
+                                i += 1
+
+                            # Page break after each session object is processed.
+                            document.add_page_break()
                     if j == 'saturday':
                         # Get all session data for Saturday.
                         saturday = data['announcingSheet']['sessions'].get(j, 'No session data for Saturday.')
+                        # Process session data for each session taking place on Saturday.
+                        for k in range(len(saturday)):
+                            # Gather Student-Independent Data
+                            day = str(saturday[k]['day'])
+                            time = str(saturday[k]['time'])
+                            sessionNumber = str(saturday[k]['sessionNumber'])
+                            nameOfRoom = str(saturday[k]['nameOfRoom'])
+                            location = day + ', ' + time + ', ' + sessionNumber + ', ' + nameOfRoom
+                            classType = saturday[k]['classType']
+                            levels = saturday[k]['levels']
+                            judges = saturday[k]['judges']
+                            judge1 = judges[0].get('firstJudge', '')
+                            judge2 = judges[0].get('secondJudge', '')
+                            judge3 = judges[0].get('thirdJudge', '')
+                            students = saturday[k]['students']
+                            student1 = students[0].get('firstStudent', '')
+                            student2 = students[0].get('secondStudent', '')
+                            student3 = students[0].get('thirdStudent', '')
+                            student4 = students[0].get('fourthStudent', '')
+                            student5 = students[0].get('fifthStudent', '')
+                            proctorName = saturday[k]['proctorName']
+                            doorMonitorName = saturday[k]['doorMonitorName']
+                            performanceOrder = saturday[k]['performanceOrder']
+
+                            # Records Data For Table
+                            records = ()
+
+                            # Event Title
+                            document.add_heading(eventName, level=0)
+                            # Title Subheading
+                            document.add_heading(documentTitle, level=1)
+                            # Day, Time, Session Number, Room
+                            document.add_heading(location, level=2)
+                            # Add Performance Class Type
+                            document.add_heading(classType, level=1)
+                            # Add Students Levels
+                            document.add_heading(f'Levels: {levels}', level=2)
+                            # Add Judges
+                            document.add_heading(f'Judge: {judge1}', level=3)
+                            if judge2 != '':
+                                document.add_heading(f'Judge: {judge2}', level=3)
+                            if judge3 != '':
+                                document.add_heading(f'Judge: {judge3}', level=3)
+                            # Add Proctor
+                            document.add_heading(f'Proctor: {proctorName}', level=3)
+                            # Add Door Monitor
+                            document.add_heading(f'Door Monitor: {doorMonitorName}', level=3)
+                            # Performance Order
+                            document.add_heading(f'{performanceOrder}:\n', level=1)
+
+                            # Student Table
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table.alignment = WD_TABLE_ALIGNMENT.CENTER
+                            table.autofit = True
+                            table.style = 'TableGrid'
+                            headerCells = table.rows[0].cells
+                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run1.bold = True
+                            run1.underline = True
+                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2.bold = True
+                            run2.underline = True
+                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3.bold = True
+                            run3.underline = True
+                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4.bold = True
+                            run4.underline = True
+                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5.bold = True
+                            run5.underline = True
+                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6.bold = True
+                            run6.underline = True
+
+                            if student1[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student1 = tuple(student1[0].values())
+                                records += (student1,)
+                            else:
+                                student1 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student1,)
+                            if student2[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student2 = tuple(student2[0].values())
+                                records += (student2,)
+                            else:
+                                student2 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student2,)
+                            if student3[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student3 = tuple(student3[0].values())
+                                records += (student3,)
+                            else:
+                                student3 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student3,)
+                            if student4[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student4 = tuple(student4[0].values())
+                                records += (student4,)
+                            else:
+                                student4 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student4,)
+                            if student5[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student5 = tuple(student5[0].values())
+                                records += (student5,)
+                            else:
+                                student5 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student5,)
+
+                            # Add Student Data To Table
+                            i = 1
+                            for perf, lvl, s1, c1, s2, c2 in records:
+                                rowCells = table.rows[i].cells
+                                rowCells[0].text = str(perf)
+                                rowCells[1].text = str(lvl)
+                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[3].text = str(c1)
+                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[5].text = str(c2)
+                                i += 1
+
+                            # Page break after each session object is processed.
+                            document.add_page_break()
+
                     if j == 'sunday':
                         # Get all session data for Sunday.
                         sunday = data['announcingSheet']['sessions'].get(j, 'No session data for Sunday.')
@@ -140,18 +392,22 @@ def createAnnouncingSheet(data):
                             location = day + ', ' + time + ', ' + sessionNumber + ', ' + nameOfRoom
                             classType = sunday[k]['classType']
                             levels = sunday[k]['levels']
-                            firstJudge = sunday[k]['firstJudge']
-                            if sunday[k]['secondJudge'] != '':
-                                secondJudge = sunday[k]['secondJudge']
-                            else:
-                                secondJudge = ''
-                            if sunday[k]['thirdJudge'] != '':
-                                thirdJudge = sunday[k]['thirdJudge']
-                            else:
-                                thirdJudge = ''
+                            judges = sunday[k]['judges']
+                            judge1 = judges[0].get('firstJudge', '')
+                            judge2 = judges[0].get('secondJudge', '')
+                            judge3 = judges[0].get('thirdJudge', '')
+                            students = sunday[k]['students']
+                            student1 = students[0].get('firstStudent', '')
+                            student2 = students[0].get('secondStudent', '')
+                            student3 = students[0].get('thirdStudent', '')
+                            student4 = students[0].get('fourthStudent', '')
+                            student5 = students[0].get('fifthStudent', '')
                             proctorName = sunday[k]['proctorName']
                             doorMonitorName = sunday[k]['doorMonitorName']
                             performanceOrder = sunday[k]['performanceOrder']
+
+                            # Records Data For Table
+                            records = ()
 
                             # Event Title
                             document.add_heading(eventName, level=0)
@@ -164,31 +420,91 @@ def createAnnouncingSheet(data):
                             # Add Students Levels
                             document.add_heading(f'Levels: {levels}', level=2)
                             # Add Judges
-                            document.add_heading(f'Judge: {firstJudge}', level=3)
-                            if sunday[k]['secondJudge'] != '':
-                                document.add_heading(f'Judge: {secondJudge}', level=3)
-                            if sunday[k]['thirdJudge'] != '':
-                                document.add_heading(f'Judge: {thirdJudge}', level=3)
+                            document.add_heading(f'Judge: {judge1}', level=3)
+                            if judge2 != '':
+                                document.add_heading(f'Judge: {judge2}', level=3)
+                            if judge3 != '':
+                                document.add_heading(f'Judge: {judge3}', level=3)
                             # Add Proctor
                             document.add_heading(f'Proctor: {proctorName}', level=3)
                             # Add Door Monitor
                             document.add_heading(f'Door Monitor: {doorMonitorName}', level=3)
                             # Performance Order
-                            document.add_heading(f'{performanceOrder}:', level=1)
+                            document.add_heading(f'{performanceOrder}:\n', level=1)
 
-                            # Print Student Data
-                            if sunday[k]['firstStudent'] != '':
-                                name = sunday[k]['firstStudent'][0]['studentFullName']
-                                level = sunday[k]['firstStudent'][0]['individualLevel']
-                                p1 = document.add_paragraph()
-                                p1.alignment = WD_ALIGN_PARAGRAPH.LEFT
-                                p1.add_run(f'1. {name}')
-                                p1.alignment = None
-                                p1.add_run(f'\t\t\t\t\t\tLeveL: {level}')
+                            # Student Table
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table.alignment = WD_TABLE_ALIGNMENT.CENTER
+                            table.autofit = True
+                            table.style = 'TableGrid'
+                            headerCells = table.rows[0].cells
+                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run1.bold = True
+                            run1.underline = True
+                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2.bold = True
+                            run2.underline = True
+                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3.bold = True
+                            run3.underline = True
+                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4.bold = True
+                            run4.underline = True
+                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5.bold = True
+                            run5.underline = True
+                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6.bold = True
+                            run6.underline = True
 
-                            print()
-                            print(f'END OF PAGE {k + 1}')
-                            print()
+                            if student1[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student1 = tuple(student1[0].values())
+                                records += (student1,)
+                            else:
+                                student1 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student1,)
+                            if student2[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student2 = tuple(student2[0].values())
+                                records += (student2,)
+                            else:
+                                student2 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student2,)
+                            if student3[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student3 = tuple(student3[0].values())
+                                records += (student3,)
+                            else:
+                                student3 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student3,)
+                            if student4[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student4 = tuple(student4[0].values())
+                                records += (student4,)
+                            else:
+                                student4 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student4,)
+                            if student5[0]['studentFullName'] != '':
+                                # Get Student Data
+                                student5 = tuple(student5[0].values())
+                                records += (student5,)
+                            else:
+                                student5 = ('N/A', '-', '-', '-', '-', '-')
+                                records += (student5,)
+
+                            # Add Student Data To Table
+                            i = 1
+                            for perf, lvl, s1, c1, s2, c2 in records:
+                                rowCells = table.rows[i].cells
+                                rowCells[0].text = str(perf)
+                                rowCells[1].text = str(lvl)
+                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[3].text = str(c1)
+                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[5].text = str(c2)
+                                i += 1
+
                             # Page break after each session object is processed.
                             document.add_page_break()
 
