@@ -1,0 +1,425 @@
+{
+	"documents": {
+		"adjudicationForm": false,
+		"announcingSheet": true,
+		"certificates": false,
+		"masterJudgeRepertoire": false,
+		"masterJudgeSchedule": false,
+		"resultsSheet": false,
+		"roomSchedules": false,
+		"sessionAssignments": false,
+		"sessionLabels": false,
+		"teacherMaster": false
+	},
+	"adjudicationForm": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"announcingSheet": {
+		"eventName": "2019 Upper Festival",
+		"documentTitle": "Announcing Sheet",
+		"sessions": {
+			"friday": [{
+				"day": "Friday",
+				"time": "9:00 am",
+				"sessionNumber": "1",
+				"nameOfRoom": "(Recital Hall)",
+				"classType": "Master Class",
+				"levels": "5",
+				"firstJudge": "Dr. Stephen Pierce, Univ. of Southern California",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "Sonnet Johnson",
+				"doorMonitorName": "Catherine Lin",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Bob White",
+					"individualLevel": "5",
+					"firstSongName:": "Sea Piece",
+					"firstSongComposer": "MacDowell",
+					"secondSongName": "Sonatina for Piano, 1st movement - Bagpipers",
+					"secondSongComposer": "Bartok"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Jack Liu",
+					"individualLevel": "5",
+					"firstSongName:": "Minuet G minor (without Trio)",
+					"firstSongComposer": "Stozel",
+					"secondSongName": "Faded Dreams",
+					"secondSongComposer": "Mier"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "Alice Peng",
+					"individualLevel": "5",
+					"firstSongName:": "Four Landlers, G Major",
+					"firstSongComposer": "Schubert",
+					"secondSongName": "Winter Splendor",
+					"secondSongComposer": "Mier"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "",
+					"individualLevel": "",
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"fifthStudent": [{
+					"studentFullName": "",
+					"individualLevel": "",
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "Friday",
+				"time": "10:00 am",
+				"sessionNumber": "2",
+				"nameOfRoom": "(Little Mozart's Studio)",
+				"classType": "Traditional",
+				"levels": "5, 6",
+				"firstJudge": "Dr. Adela Park, UNR",
+				"secondJudge": "Katy Sargent, Bountiful, Utah",
+				"thirdJudge": "",
+				"proctorName": "Youseon Kim",
+				"doorMonitorName": "Christine Barden",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Bob Hopkins",
+					"individualLevel": "5",
+					"firstSongName:": "Solfeggietto",
+					"firstSongComposer": "Bach, C.P.E.",
+					"secondSongName": "Evening in the Country",
+					"secondSongComposer": "Bartok"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Frank Reyher",
+					"individualLevel": "5",
+					"firstSongName:": "Sonatina A minor",
+					"firstSongComposer": "Benda",
+					"secondSongName": "Phantom Rider",
+					"secondSongComposer": "Gillock"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "Alice Lee",
+					"individualLevel": "6",
+					"firstSongName:": "Fantasia D minor",
+					"firstSongComposer": "Telemann",
+					"secondSongName": "Polonaise, G minor, 1817",
+					"secondSongComposer": "Chopin"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "Grace Soto",
+					"individualLevel": "6",
+					"firstSongName:": "Mazurka, A minor",
+					"firstSongComposer": "Chopin",
+					"secondSongName": "Jubilato",
+					"secondSongComposer": "Alexander"
+				}],
+				"fifthStudent": [{
+					"studentFullName": "Edward Hwang",
+					"individualLevel": "6",
+					"firstSongName:": "Remembrance",
+					"firstSongComposer": "Schumann",
+					"secondSongName": "Quiet Nights",
+					"secondSongComposer": "Rocherolle"
+				}]
+			}],
+			"saturday": [{
+				"day": "Saturday",
+				"time": "11:00 am",
+				"sessionNumber": "1",
+				"nameOfRoom": "(Recital Hall)",
+				"classType": "Master Class",
+				"levels": "7, 8",
+				"firstJudge": "Dr. Stephen Pierce, Univ. of Southern California",
+				"secondJudge": "",
+				"thirdJudge": "",
+				"proctorName": "Sonnet Johnson",
+				"doorMonitorName": "Carol Taylor",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Alice Venzon",
+					"individualLevel": "7",
+					"firstSongName:": "Waltz A-flat Major",
+					"firstSongComposer": "Chopin",
+					"secondSongName": "Cantico Iberico",
+					"secondSongComposer": "Rocherolle"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Grace Spadone",
+					"individualLevel": "7",
+					"firstSongName:": "Allegro agitato in C minor",
+					"firstSongComposer": "Burgmuller",
+					"secondSongName": "Joc cu Bata",
+					"secondSongComposer": "Bartok"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "Anne C. Jones",
+					"individualLevel": "8",
+					"firstSongName:": "Waltz B minor",
+					"firstSongComposer": "Chopin",
+					"secondSongName": "Zambra",
+					"secondSongComposer": "Turina"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "",
+					"individualLevel": "",
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}],
+				"fifthStudent": [{
+					"studentFullName": "",
+					"individualLevel": "",
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "Saturday",
+				"time": "11:00 am",
+				"sessionNumber": "2",
+				"nameOfRoom": "(Little Mozart's Studio)",
+				"classType": "Traditional",
+				"levels": "6, 7",
+				"firstJudge": "Dr. Adela Park, UNR",
+				"secondJudge": "Katy Sargent, Bountiful, Utah",
+				"thirdJudge": "",
+				"proctorName": "Catherine Lin",
+				"doorMonitorName": "Amy Jahn",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Bob Desai",
+					"individualLevel": "6",
+					"firstSongName:": "Polonaise, B-flat 1817",
+					"firstSongComposer": "Chopin",
+					"secondSongName": "Zigzag",
+					"secondSongComposer": "Alexander"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Frank Wang",
+					"individualLevel": "6",
+					"firstSongName:": "Alla Tarantelle",
+					"firstSongComposer": "MacDowell",
+					"secondSongName": "Sonatina, C Major 1st-Allegro con spirito",
+					"secondSongComposer": "Kuhlau"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "Alice Tenneti",
+					"individualLevel": "7",
+					"firstSongName:": "Sonata, G Major 1st-Allegro ma non Troppo",
+					"firstSongComposer": "Beethoven",
+					"secondSongName": "Prelude, B minor",
+					"secondSongComposer": "Chopin"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "John Kim",
+					"individualLevel": "7",
+					"firstSongName:": "Waltz A-flat Major",
+					"firstSongComposer": "Chopin",
+					"secondSongName": "Invention No. 1, C Major",
+					"secondSongComposer": "Bach, J.S."
+				}],
+				"fifthStudent": [{
+					"studentFullName": "Alan Miercort",
+					"individualLevel": "7",
+					"firstSongName:": "Invention No. 1, C Major",
+					"firstSongComposer": "Bach, J.S.",
+					"secondSongName": "Tarantella Bravura",
+					"secondSongComposer": "Barden"
+				}]
+			}],
+			"sunday": [{
+				"day": "Sunday",
+				"time": "2:30 pm",
+				"sessionNumber": "2",
+				"nameOfRoom": "(Little Mozart's Studio)",
+				"classType": "Traditional",
+				"levels": "5, 6, 7",
+				"firstJudge": "Dr. Jim Winn, UNR",
+				"secondJudge": "Katy Sargent, Bountiful, Utah",
+				"thirdJudge": "",
+				"proctorName": "Lacey Cope",
+				"doorMonitorName": "Rong Lucchesi",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Alice Hur",
+					"individualLevel": "5",
+					"firstSongName:": "Solfeggietto",
+					"firstSongComposer": "Bach, C.P.E.",
+					"secondSongName": "The Horseman",
+					"secondSongComposer": "Schumann"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Bob Kaya Evenson",
+					"individualLevel": "5",
+					"firstSongName:": "Invention",
+					"firstSongComposer": "Kirnberger",
+					"secondSongName": "Fantasy Dance",
+					"secondSongComposer": "Schumann"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "John Park",
+					"individualLevel": "6",
+					"firstSongName:": "Smoldering Blues",
+					"firstSongComposer": "Alexander",
+					"secondSongName": "Sonatina D Major 1st-Allegro con Spirito",
+					"secondSongComposer": "Clementi"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "Alan Hopkins",
+					"individualLevel": "7",
+					"firstSongName:": "Invention No. 1, C Major",
+					"firstSongComposer": "Bach, J.S.",
+					"secondSongName": "Song of the Lark  (March)",
+					"secondSongComposer": "Tchaikowsky"
+				}],
+				"fifthStudent": [{
+					"studentFullName": "",
+					"individualLevel": "",
+					"firstSongName:": "",
+					"firstSongComposer": "",
+					"secondSongName": "",
+					"secondSongComposer": ""
+				}]
+			},
+			{
+				"day": "Sunday",
+				"time": "4:00 pm",
+				"sessionNumber": "1",
+				"nameOfRoom": "(Recital Hall)",
+				"classType": "Master Class",
+				"levels": "5, 7, 8, 9",
+				"firstJudge": "Dr. Stephen Pierce, Univ. of Southern California",
+				"secondJudge": "Dr. Jim Winn, UNR",
+				"thirdJudge": "Katy Sargent, Bountiful, Utah",
+				"proctorName": "Cindy Harris",
+				"doorMonitorName": "Olga Barry",
+				"performanceOrder": "Performance Order",
+				"firstStudent": [{
+					"studentFullName": "Grace Yuan",
+					"individualLevel": "5",
+					"firstSongName:": "Sonatina, C Major 3rd-Finale:Allegro",
+					"firstSongComposer": "Haydn",
+					"secondSongName": "Hummingbird",
+					"secondSongComposer": "Gillock"
+				}],
+				"secondStudent": [{
+					"studentFullName": "Edward Oranges",
+					"individualLevel": "7",
+					"firstSongName:": "Nocturne C Major",
+					"firstSongComposer": "Grieg",
+					"secondSongName": "Joc cu Bata",
+					"secondSongComposer": "Bartok"
+				}],
+				"thirdStudent": [{
+					"studentFullName": "Alan Oranges",
+					"individualLevel": "8",
+					"firstSongName:": "Divertimento",
+					"firstSongComposer": "Wagenseil",
+					"secondSongName": "Toccata",
+					"secondSongComposer": "Tauriello"
+				}],
+				"fourthStudent": [{
+					"studentFullName": "Alice Tucker",
+					"individualLevel": "9",
+					"firstSongName:": "Prelude",
+					"firstSongComposer": "Grieg",
+					"secondSongName": "Maple Leaf Rag",
+					"secondSongComposer": "Joplin"
+				}],
+				"fifthStudent": [{
+					"studentFullName": "Bill Pitani",
+					"individualLevel": "9",
+					"firstSongName:": "Sonata, A Major Rondo alla Turca: Allegretto",
+					"firstSongComposer": "Mozart, W.A.",
+					"secondSongName": "Arabesque I, E Major",
+					"secondSongComposer": "Debussy"
+				}]
+			}]
+		}
+	},
+	"certificates": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"masterJudgeRepertoire": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"masterJudgeSchedule": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"resultsSheet": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"roomSchedules": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"sessionAssignments": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"sessionLabels": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	},
+	"teacherMaster": {
+		"eventName": "",
+		"documentTitle": "",
+		"sessions": {
+			"friday": [{}],
+			"saturday": [{}],
+			"sunday": [{}]
+		}
+	}
+}
