@@ -31,51 +31,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			},
 			{
@@ -85,51 +89,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			}],
 			"saturday": [{
@@ -139,51 +147,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			},
 			{
@@ -193,51 +205,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			}],
 			"sunday": [{
@@ -247,51 +263,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			},
 			{
@@ -301,51 +321,55 @@
 				"nameOfRoom": "",
 				"classType": "",
 				"levels": "",
-				"firstJudge": "",
-				"secondJudge": "",
-				"thirdJudge": "",
+				"judges": [{
+					"firstJudge": "",
+					"secondJudge": "",
+					"thirdJudge": ""
+				}],
 				"proctorName": "",
 				"doorMonitorName": "",
-				"performanceOrder": "Performance Order",
-				"firstStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"secondStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"thirdStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fourthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
-				}],
-				"fifthStudent": [{
-					"studentFullName": "",
-					"individualLevel": "",
-					"firstSongName:": "",
-					"firstSongComposer": "",
-					"secondSongName": "",
-					"secondSongComposer": ""
+				"performanceOrder": "",
+				"students": [{
+					"firstStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"secondStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"thirdStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fourthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}],
+					"fifthStudent": [{
+						"studentFullName": "",
+						"individualLevel": "",
+						"firstSongName:": "",
+						"firstSongComposer": "",
+						"secondSongName": "",
+						"secondSongComposer": ""
+					}]
 				}]
 			}]
 		}
