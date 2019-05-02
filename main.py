@@ -176,27 +176,30 @@ def createAnnouncingSheet(data):
                             document.add_heading(f'{performanceOrder}:\n', level=1)
 
                             # Student Table
-                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=7)
                             table.alignment = WD_TABLE_ALIGNMENT.CENTER
                             table.autofit = True
                             table.style = 'TableGrid'
                             headerCells = table.rows[0].cells
-                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run0 = headerCells[0].paragraphs[0].add_run('\nOrder\n')
+                            run0.bold = True
+                            run0.underline = True
+                            run1 = headerCells[1].paragraphs[0].add_run('\nName\n')
                             run1.bold = True
                             run1.underline = True
-                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2 = headerCells[2].paragraphs[0].add_run('\nLevel\n')
                             run2.bold = True
                             run2.underline = True
-                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3 = headerCells[3].paragraphs[0].add_run('\nSong I\n')
                             run3.bold = True
                             run3.underline = True
-                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4 = headerCells[4].paragraphs[0].add_run('\nSong I\nComposer\n')
                             run4.bold = True
                             run4.underline = True
-                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5 = headerCells[5].paragraphs[0].add_run('\nSong II\n')
                             run5.bold = True
                             run5.underline = True
-                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6 = headerCells[6].paragraphs[0].add_run('\nSong II\nComposer\n')
                             run6.bold = True
                             run6.underline = True
 
@@ -240,12 +243,13 @@ def createAnnouncingSheet(data):
                             i = 1
                             for perf, lvl, s1, c1, s2, c2 in records:
                                 rowCells = table.rows[i].cells
-                                rowCells[0].text = str(perf)
-                                rowCells[1].text = str(lvl)
-                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
-                                rowCells[3].text = str(c1)
-                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
-                                rowCells[5].text = str(c2)
+                                rowCells[0].text = str(i)
+                                rowCells[1].text = str(perf)
+                                rowCells[2].text = str(lvl)
+                                rowRun1 = rowCells[3].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[4].text = str(c1)
+                                rowRun2 = rowCells[5].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[6].text = str(c2)
                                 i += 1
 
                             # Page break after each session object is processed.
@@ -304,27 +308,30 @@ def createAnnouncingSheet(data):
                             document.add_heading(f'{performanceOrder}:\n', level=1)
 
                             # Student Table
-                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=7)
                             table.alignment = WD_TABLE_ALIGNMENT.CENTER
                             table.autofit = True
                             table.style = 'TableGrid'
                             headerCells = table.rows[0].cells
-                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run0 = headerCells[0].paragraphs[0].add_run('\nOrder\n')
+                            run0.bold = True
+                            run0.underline = True
+                            run1 = headerCells[1].paragraphs[0].add_run('\nName\n')
                             run1.bold = True
                             run1.underline = True
-                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2 = headerCells[2].paragraphs[0].add_run('\nLevel\n')
                             run2.bold = True
                             run2.underline = True
-                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3 = headerCells[3].paragraphs[0].add_run('\nSong I\n')
                             run3.bold = True
                             run3.underline = True
-                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4 = headerCells[4].paragraphs[0].add_run('\nSong I\nComposer\n')
                             run4.bold = True
                             run4.underline = True
-                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5 = headerCells[5].paragraphs[0].add_run('\nSong II\n')
                             run5.bold = True
                             run5.underline = True
-                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6 = headerCells[6].paragraphs[0].add_run('\nSong II\nComposer\n')
                             run6.bold = True
                             run6.underline = True
 
@@ -368,12 +375,13 @@ def createAnnouncingSheet(data):
                             i = 1
                             for perf, lvl, s1, c1, s2, c2 in records:
                                 rowCells = table.rows[i].cells
-                                rowCells[0].text = str(perf)
-                                rowCells[1].text = str(lvl)
-                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
-                                rowCells[3].text = str(c1)
-                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
-                                rowCells[5].text = str(c2)
+                                rowCells[0].text = str(i)
+                                rowCells[1].text = str(perf)
+                                rowCells[2].text = str(lvl)
+                                rowRun1 = rowCells[3].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[4].text = str(c1)
+                                rowRun2 = rowCells[5].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[6].text = str(c2)
                                 i += 1
 
                             # Page break after each session object is processed.
@@ -433,27 +441,30 @@ def createAnnouncingSheet(data):
                             document.add_heading(f'{performanceOrder}:\n', level=1)
 
                             # Student Table
-                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=6)
+                            table = document.add_table(rows=int((len(students[0]) + 1)), cols=7)
                             table.alignment = WD_TABLE_ALIGNMENT.CENTER
                             table.autofit = True
                             table.style = 'TableGrid'
                             headerCells = table.rows[0].cells
-                            run1 = headerCells[0].paragraphs[0].add_run('\nPerformer\n')
+                            run0 = headerCells[0].paragraphs[0].add_run('\nOrder\n')
+                            run0.bold = True
+                            run0.underline = True
+                            run1 = headerCells[1].paragraphs[0].add_run('\nName\n')
                             run1.bold = True
                             run1.underline = True
-                            run2 = headerCells[1].paragraphs[0].add_run('\nLevel\n')
+                            run2 = headerCells[2].paragraphs[0].add_run('\nLevel\n')
                             run2.bold = True
                             run2.underline = True
-                            run3 = headerCells[2].paragraphs[0].add_run('\nSong 1\n')
+                            run3 = headerCells[3].paragraphs[0].add_run('\nSong I\n')
                             run3.bold = True
                             run3.underline = True
-                            run4 = headerCells[3].paragraphs[0].add_run('\nComposer 1\n')
+                            run4 = headerCells[4].paragraphs[0].add_run('\nSong I\nComposer\n')
                             run4.bold = True
                             run4.underline = True
-                            run5 = headerCells[4].paragraphs[0].add_run('\nSong 2\n')
+                            run5 = headerCells[5].paragraphs[0].add_run('\nSong II\n')
                             run5.bold = True
                             run5.underline = True
-                            run6 = headerCells[5].paragraphs[0].add_run('\nComposer 2\n')
+                            run6 = headerCells[6].paragraphs[0].add_run('\nSong II\nComposer\n')
                             run6.bold = True
                             run6.underline = True
 
@@ -497,12 +508,13 @@ def createAnnouncingSheet(data):
                             i = 1
                             for perf, lvl, s1, c1, s2, c2 in records:
                                 rowCells = table.rows[i].cells
-                                rowCells[0].text = str(perf)
-                                rowCells[1].text = str(lvl)
-                                rowRun1 = rowCells[2].paragraphs[0].add_run(str(s1)).italic = True
-                                rowCells[3].text = str(c1)
-                                rowRun2 = rowCells[4].paragraphs[0].add_run(str(s2)).italic = True
-                                rowCells[5].text = str(c2)
+                                rowCells[0].text = str(i)
+                                rowCells[1].text = str(perf)
+                                rowCells[2].text = str(lvl)
+                                rowRun1 = rowCells[3].paragraphs[0].add_run(str(s1)).italic = True
+                                rowCells[4].text = str(c1)
+                                rowRun2 = rowCells[5].paragraphs[0].add_run(str(s2)).italic = True
+                                rowCells[6].text = str(c2)
                                 i += 1
 
                             # Page break after each session object is processed.
